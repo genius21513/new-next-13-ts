@@ -151,6 +151,48 @@
   background-clip: content-box;
 }
 
+.brb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* width: 100px; */
+  min-height: 100px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.brb::before, .brb::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.brb::before {
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    red,
+    orange,
+    blue,
+    green,
+    pink,
+    yellow
+  );
+  animation: 6s rotate linear infinite;  
+}
+
+.brb::after {
+  inset: 0;
+  /* margin: 0; */
+  padding: 1px;
+  border-radius: 12px;
+  background: black;
+  /* background: linear-gradient( to bottom right, rgba(239, 245, 249, 1), rgba(228, 232, 233, 1) ); */
+  background-clip: content-box;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -257,7 +299,7 @@
 
   .logo,
   .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    filter: invert(1) drop-shadow(0 0 0.3rem #a7671f70);
   }
 }
 

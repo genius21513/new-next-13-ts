@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/cookies.js", "src/pages/api/posts/[id].js", "src/pages/index.js", "src/pages/_app.js"],
   "exclude": ["node_modules"]
 }
